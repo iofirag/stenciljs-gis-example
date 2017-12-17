@@ -7,9 +7,10 @@ import { GisViewerProps } from '../../models/api';
     styleUrl: 'dev-component.scss'
 })
 export class DevComponent {
-    private gisViewer: HTMLGisViewerElement;
     private gisViewerProps: GisViewerProps;
 
+    private gisViewer: HTMLGisViewerElement;
+    
     constructor() {
         this.createDevState();
     }

@@ -10,9 +10,13 @@ import { GisViewerProps } from '../../models/api';
 export class GisViewer {
     private map: L.Map;
 
-    @Prop() gisViewerProps: GisViewerProps;
+    // @Prop() gisviewerprops: GisViewerProps;
+    @Prop() myname: string;
     
-
+    componentWillLoad() {
+        // console.log('The component is about to be rendered', this);
+        // debugger
+    }
     render() {
         return ( <div id='map' /> )
     }
@@ -23,11 +27,11 @@ export class GisViewer {
         L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(this.map);
-
+        debugger
         this.map.on('moveend', () => {
             debugger
-            if (this.gisViewerProps.onMapReady && typeof this.gisViewerProps.onMapReady === 'function') {
-                this.gisViewerProps.onMapReady();
+            if (this.gisviewerprops.onMapReady && typeof this.gisviewerprops.onMapReady === 'function') {
+                this.gisviewerprops.onMapReady();
             }
         })
     }

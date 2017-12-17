@@ -7,9 +7,10 @@ import { GisViewerProps } from '../../models/api';
     styleUrl: 'dev-component.scss'
 })
 export class DevComponent {
-    private gisViewer: HTMLGisViewerElement;
     private gisViewerProps: GisViewerProps;
 
+    gisViewer: HTMLGisViewerElement;
+    
     constructor() {
         this.createDevState();
     }
@@ -51,11 +52,6 @@ export class DevComponent {
         this.gisViewer = document.querySelector('gis-viewer');
     }
 
-
-    testCreateMaerker() {
-        console.log('Testing create marker command');
-        this.gisViewer.createMaerker();
-    }
     createDevState(): void {
         this.gisViewerProps = {
             onMapReady: () => {
@@ -63,4 +59,10 @@ export class DevComponent {
             }
         }
     }
+    testCreateMaerker() {
+        console.log('Testing create marker command');
+        this.gisViewer.createMaerker();
+    }
+
+    
 }

@@ -7,9 +7,9 @@ import { GisViewerProps } from '../../models/api';
     styleUrl: 'dev-component.scss'
 })
 export class DevComponent {
-    private gisViewer: HTMLGisViewerElement;
     private gisViewerProps: GisViewerProps;
-
+    private gisViewer: HTMLGisViewerElement;
+    
     constructor() {
         this.createDevState();
     }
@@ -41,7 +41,7 @@ export class DevComponent {
                         {/* <input type="button" value="" onClick={() => {}} /> */}
                     </div>
                     <div class="gisWrapper">
-                        <gis-viewer gisViewerProps={this.gisViewerProps} />
+                        <gis-viewer gis-viewer-Props={this.gisViewerProps} />
                     </div>
                 </div>
             </div>

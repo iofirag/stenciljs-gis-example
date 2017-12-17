@@ -9,11 +9,11 @@ import { GisViewerProps } from '../../models/api';
 export class DevComponent {
     private gisViewer: HTMLGisViewerElement;
     private gisViewerProps: GisViewerProps;
-
     constructor() {
         this.createDevState();
     }
     render() {
+        let b = this.gisViewerProps;
         return (
             <div class="dev-components">
                 <div class="header">
@@ -41,7 +41,7 @@ export class DevComponent {
                         {/* <input type="button" value="" onClick={() => {}} /> */}
                     </div>
                     <div class="gisWrapper">
-                        <gis-viewer gisViewerProps={this.gisViewerProps} />
+                        <gis-viewer gisviewerprops={this.gisViewerProps} />
                     </div>
                 </div>
             </div>

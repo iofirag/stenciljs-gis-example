@@ -7,9 +7,10 @@ import { GisViewerProps } from '../../models/api';
     styleUrl: 'dev-component.scss'
 })
 export class DevComponent {
-    private gisViewer: HTMLGisViewerElement;
     private gisViewerProps: GisViewerProps;
 
+    gisViewer: HTMLGisViewerElement;
+    
     constructor() {
         this.createDevState();
     }
@@ -50,7 +51,6 @@ export class DevComponent {
     componentDidLoad() {
         this.gisViewer = document.querySelector('gis-viewer');
     }
-
 
     testCreateMaerker() {
         console.log('Testing create marker command');

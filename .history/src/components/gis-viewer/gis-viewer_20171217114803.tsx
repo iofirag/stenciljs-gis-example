@@ -10,9 +10,9 @@ import { GisViewerProps } from '../../models/api';
 export class GisViewer {
     private map: L.Map;
 
-    @Prop() gisViewerProps: GisViewerProps;
+    @Prop() public gisViewerProps: any;
     
-
+    
     render() {
         return ( <div id='map' /> )
     }
@@ -25,7 +25,6 @@ export class GisViewer {
         }).addTo(this.map);
 
         this.map.on('moveend', () => {
-            debugger
             if (this.gisViewerProps.onMapReady && typeof this.gisViewerProps.onMapReady === 'function') {
                 this.gisViewerProps.onMapReady();
             }

@@ -41,7 +41,7 @@ export class DevComponent {
                         {/* <input type="button" value="" onClick={() => {}} /> */}
                     </div>
                     <div class="gisWrapper">
-                        <gis-viewer gisViewerProps={this.gisViewerProps} />
+                        <gis-viewer gisViewerprops={this.gisViewerProps} />
                     </div>
                 </div>
             </div>
