@@ -10,7 +10,7 @@ import {
   MatchResults,
 } from '@stencil/router';
 import {
-  MapSettings,
+  GisViewerProps,
 } from './models/api';
 
 import {
@@ -127,7 +127,7 @@ declare global {
   }
   namespace JSXElements {
     export interface GisViewerAttributes extends HTMLAttributes {
-      mapSettings?: MapSettings;
+      mapSettings?: GisViewerProps;
     }
   }
 }

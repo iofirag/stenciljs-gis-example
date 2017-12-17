@@ -50,12 +50,12 @@ export class DevComponent {
 
     getDevState(): GisViewerProps/*: GisViewerProps*/ {
         let gisViewer: GisViewerProps = {
-            // myProp: 'my dev State',
-            // onFooComplited: () => {
-            //     console.log('my onFooComplited callback has executed');
-            // }
+            myProp: 'my dev State',
+            onFooComplited: () => {
+                console.log('my onFooComplited callback has executed');
+            }
         }
-        return gisViewer;
+        return mapSettings;
     }
 
     componentDidLoad() {

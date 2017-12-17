@@ -55,7 +55,7 @@ export class DevComponent {
             //     console.log('my onFooComplited callback has executed');
             // }
         }
-        return gisViewer;
+        return mapSettings;
     }
 
     componentDidLoad() {

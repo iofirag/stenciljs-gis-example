@@ -1,5 +1,5 @@
 import { Component } from '@stencil/core';
-import { MapSettings, GisViewerProps } from '../../models/api';
+import { MapSettings } from '../../models/api';
 // import { GisViewerProps } from '../../models/api';
 // import { AppBar, RaisedButton } from "material-ui";
 
@@ -49,13 +49,13 @@ export class DevComponent {
     }
 
     getDevState(): GisViewerProps/*: GisViewerProps*/ {
-        let gisViewer: GisViewerProps = {
-            // myProp: 'my dev State',
-            // onFooComplited: () => {
-            //     console.log('my onFooComplited callback has executed');
-            // }
+        return GisViewerProps = {
+            myProp: 'my dev State',
+            onFooComplited: () => {
+                console.log('my onFooComplited callback has executed');
+            }
         }
-        return gisViewer;
+        return mapSettings;
     }
 
     componentDidLoad() {
