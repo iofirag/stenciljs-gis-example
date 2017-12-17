@@ -57,11 +57,11 @@ export class DevComponent {
     createDevState(): void {
         this.gisViewerProps = {
             onMapReady: () => {
-                console.log('Map is ready! (callback)');
+                console.log('my onFooComplited callback has executed');
             }
         }
     }
-
+    
     testCreateMaerker() {
         console.log('Testing create marker command');
         this.gisViewer.createMaerker();

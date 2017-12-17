@@ -7,101 +7,8 @@
 import '@stencil/router';
 
 import {
-  MatchResults,
-} from '@stencil/router';
-import {
   GisViewerProps,
 } from './models/api';
-
-import {
-  AppHome as AppHome
-} from './components/app-home/app-home';
-
-declare global {
-  interface HTMLAppHomeElement extends AppHome, HTMLElement {
-  }
-  var HTMLAppHomeElement: {
-    prototype: HTMLAppHomeElement;
-    new (): HTMLAppHomeElement;
-  };
-  interface HTMLElementTagNameMap {
-    "app-home": HTMLAppHomeElement;
-  }
-  interface ElementTagNameMap {
-    "app-home": HTMLAppHomeElement;
-  }
-  namespace JSX {
-    interface IntrinsicElements {
-      "app-home": JSXElements.AppHomeAttributes;
-    }
-  }
-  namespace JSXElements {
-    export interface AppHomeAttributes extends HTMLAttributes {
-      
-    }
-  }
-}
-
-
-import {
-  AppProfile as AppProfile
-} from './components/app-profile/app-profile';
-
-declare global {
-  interface HTMLAppProfileElement extends AppProfile, HTMLElement {
-  }
-  var HTMLAppProfileElement: {
-    prototype: HTMLAppProfileElement;
-    new (): HTMLAppProfileElement;
-  };
-  interface HTMLElementTagNameMap {
-    "app-profile": HTMLAppProfileElement;
-  }
-  interface ElementTagNameMap {
-    "app-profile": HTMLAppProfileElement;
-  }
-  namespace JSX {
-    interface IntrinsicElements {
-      "app-profile": JSXElements.AppProfileAttributes;
-    }
-  }
-  namespace JSXElements {
-    export interface AppProfileAttributes extends HTMLAttributes {
-      match?: MatchResults;
-    }
-  }
-}
-
-
-import {
-  DevComponent as DevComponent
-} from './components/dev-component/dev-component';
-
-declare global {
-  interface HTMLDevComponentElement extends DevComponent, HTMLElement {
-  }
-  var HTMLDevComponentElement: {
-    prototype: HTMLDevComponentElement;
-    new (): HTMLDevComponentElement;
-  };
-  interface HTMLElementTagNameMap {
-    "dev-component": HTMLDevComponentElement;
-  }
-  interface ElementTagNameMap {
-    "dev-component": HTMLDevComponentElement;
-  }
-  namespace JSX {
-    interface IntrinsicElements {
-      "dev-component": JSXElements.DevComponentAttributes;
-    }
-  }
-  namespace JSXElements {
-    export interface DevComponentAttributes extends HTMLAttributes {
-      
-    }
-  }
-}
-
 
 import {
   GisViewer as GisViewer
@@ -127,7 +34,7 @@ declare global {
   }
   namespace JSXElements {
     export interface GisViewerAttributes extends HTMLAttributes {
-      mapSettings?: GisViewerProps;
+      gisViewerProps?: GisViewerProps;
     }
   }
 }

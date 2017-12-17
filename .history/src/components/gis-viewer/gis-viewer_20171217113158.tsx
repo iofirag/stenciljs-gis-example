@@ -25,7 +25,9 @@ export class GisViewer {
             attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(this.map);
 
+        debugger
         this.map.on('moveend', () => {
+
             if (this.gisViewerProps.onMapReady && typeof this.gisViewerProps.onMapReady === 'function') {
                 this.gisViewerProps.onMapReady();
             }

@@ -54,14 +54,6 @@ export class DevComponent {
         this.gisViewer = document.querySelector('gis-viewer');
     }
 
-    createDevState(): void {
-        this.gisViewerProps = {
-            onMapReady: () => {
-                console.log('Map is ready! (callback)');
-            }
-        }
-    }
-
     testCreateMaerker() {
         console.log('Testing create marker command');
         this.gisViewer.createMaerker();

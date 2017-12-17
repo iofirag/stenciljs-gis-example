@@ -1,6 +1,6 @@
 /* GisViewerProps and it children goes here */
 
-export type GisViewerProps = {
+export type GisViewerProps {
     tileLayers?: TileLayerDefinition[];
     mapSettings?: MapSettings;
     defaultMarkerIcon?: DefaultMarkerIcon;

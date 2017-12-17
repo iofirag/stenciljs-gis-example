@@ -1,6 +1,6 @@
 import { Component, Prop, Method } from '@stencil/core';
 import * as L from 'leaflet';
-import { GisViewerProps } from '../../models/api';
+import { MapSettings } from '../../models/api';
 
 
 @Component({
@@ -11,7 +11,7 @@ export class GisViewer {
     
     private map: L.Map;
 
-    @Prop() public gisViewerProps: GisViewerProps;
+    @Prop() mapSettings: GisViewerProps;
     
     
     render() {
@@ -25,9 +25,9 @@ export class GisViewer {
             attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(this.map);
 
-        this.map.on('moveend', () => {
-            if (this.gisViewerProps.onMapReady && typeof this.gisViewerProps.onMapReady === 'function') {
-                this.gisViewerProps.onMapReady();
+        this.map.on('moveend', ()=>{
+            if (this.mapSettings.onFooComplited && typeof this.mapSettings.onFooComplited === 'function') {
+                this.mapSettings.onFooComplited();
             }
         })
     }

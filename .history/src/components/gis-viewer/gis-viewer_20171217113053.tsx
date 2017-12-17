@@ -26,8 +26,8 @@ export class GisViewer {
         }).addTo(this.map);
 
         this.map.on('moveend', () => {
-            if (this.gisViewerProps.onMapReady && typeof this.gisViewerProps.onMapReady === 'function') {
-                this.gisViewerProps.onMapReady();
+            if (this.gisViewerProps.onFooComplited && typeof this.mapSettings.onFooComplited === 'function') {
+                this.mapSettings.onFooComplited();
             }
         })
     }

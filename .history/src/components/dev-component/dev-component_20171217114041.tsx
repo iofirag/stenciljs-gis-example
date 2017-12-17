@@ -50,16 +50,17 @@ export class DevComponent {
             </div>
         );
     }
-    componentDidLoad() {
-        this.gisViewer = document.querySelector('gis-viewer');
-    }
 
     createDevState(): void {
         this.gisViewerProps = {
             onMapReady: () => {
-                console.log('Map is ready! (callback)');
+                console.log('my onFooComplited callback has executed');
             }
         }
+    }
+
+    componentDidLoad() {
+        this.gisViewer = document.querySelector('gis-viewer');
     }
 
     testCreateMaerker() {

@@ -9,14 +9,11 @@ import { GisViewerProps } from '../../models/api';
     styleUrl: 'dev-component.scss'
 })
 export class DevComponent {
-    private gisViewerProps: GisViewerProps;
 
     gisViewer: HTMLGisViewerElement;
     
-    constructor() {
-        this.createDevState();
-    }
     render() {
+
         return (
             <div class="dev-components">
                 <div class="header">
@@ -44,22 +41,25 @@ export class DevComponent {
                         {/* <input type="button" value="" onClick={() => {}} /> */}
                     </div>
                     <div class="gisWrapper">
-                        <gis-viewer gisViewerProps={this.gisViewerProps} />
+                        <gis-viewer gisViewerProps={...this.getDevState()} />
                     </div>
                 </div>
             </div>
         );
     }
-    componentDidLoad() {
-        this.gisViewer = document.querySelector('gis-viewer');
+
+    getDevState(): GisViewerProps/*: GisViewerProps*/ {
+        let gisViewer: GisViewerProps = {
+            // myProp: 'my dev State',
+            // onFooComplited: () => {
+            //     console.log('my onFooComplited callback has executed');
+            // }
+        }
+        return gisViewer;
     }
 
-    createDevState(): void {
-        this.gisViewerProps = {
-            onMapReady: () => {
-                console.log('Map is ready! (callback)');
-            }
-        }
+    componentDidLoad() {
+        this.gisViewer = document.querySelector('gis-viewer');
     }
 
     testCreateMaerker() {

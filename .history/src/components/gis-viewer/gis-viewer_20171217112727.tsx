@@ -24,12 +24,6 @@ export class GisViewer {
         L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(this.map);
-
-        this.map.on('moveend', () => {
-            if (this.gisViewerProps.onMapReady && typeof this.gisViewerProps.onMapReady === 'function') {
-                this.gisViewerProps.onMapReady();
-            }
-        })
     }
 
 

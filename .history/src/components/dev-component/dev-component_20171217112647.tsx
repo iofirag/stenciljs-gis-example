@@ -13,10 +13,11 @@ export class DevComponent {
 
     gisViewer: HTMLGisViewerElement;
     
-    constructor() {
+    DevComponent() {
         this.createDevState();
     }
     render() {
+
         return (
             <div class="dev-components">
                 <div class="header">
@@ -50,16 +51,18 @@ export class DevComponent {
             </div>
         );
     }
-    componentDidLoad() {
-        this.gisViewer = document.querySelector('gis-viewer');
-    }
 
     createDevState(): void {
         this.gisViewerProps = {
             onMapReady: () => {
-                console.log('Map is ready! (callback)');
+                console.log('my onFooComplited callback has executed');
             }
         }
+        // return gisViewer;
+    }
+
+    componentDidLoad() {
+        this.gisViewer = document.querySelector('gis-viewer');
     }
 
     testCreateMaerker() {

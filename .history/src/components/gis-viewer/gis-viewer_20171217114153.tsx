@@ -26,6 +26,7 @@ export class GisViewer {
         }).addTo(this.map);
 
         this.map.on('moveend', () => {
+            debugger
             if (this.gisViewerProps.onMapReady && typeof this.gisViewerProps.onMapReady === 'function') {
                 this.gisViewerProps.onMapReady();
             }
