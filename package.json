@@ -24,6 +24,7 @@
     "@stencil/utils": "latest",
     "@types/html2canvas": "^0.5.35",
     "@types/jest": "^21.1.1",
+    "@types/leaflet": "^1.2.3",
     "canvg-browser": "^1.0.0",
     "html2canvas": "^1.0.0-alpha.3",
     "jest": "^21.2.1"
