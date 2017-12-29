@@ -1,0 +1,148 @@
+// to be remove 
+.export-map {
+  position: absolute;
+  right: 68px;
+  top: -44px;
+}
+
+.button-wrapper{
+  position: relative;
+}
+
+.btn-menu {
+  cursor: pointer;
+  &:hover {
+    background-color: #f4f4f4;
+  }
+}
+
+.menu {
+  list-style: none;
+  padding-left: 0;
+  width: fit-content; 
+  margin: 0;
+  top: 34px;
+  display: none;
+  position: absolute;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.36);
+}
+
+.menu-item {
+  height: 30px;
+  padding: 0 10px;
+  white-space: nowrap;
+  border-bottom: 1px solid lightgray;
+  box-sizing: border-box;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  
+  &:last-child {
+    border-bottom: none;
+  }
+  &:hover {
+    background-color: lightyellow;
+  }
+}
+
+.custom-icon {
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-size: 19px 19px;
+  background-position: 50%;
+}
+
+.icon-kml {
+  background-image: url('../../../../../../../public/icons/kml-icon.png');
+}
+
+.icon-shp {
+  background-image: url('../../../../../../../public/icons/icon-shp.png'); 
+}
+
+.icon-csv {
+  background-image: url('../../../../../../../public/icons/csv-icon.png'); 
+}
+
+.icon-pin {
+  background-image: url('../../../../../../../public/icons/pin-icon.png'); 
+}
+
+.icon-heatmap {
+  background-image: url('../../../../../../../public/icons/heatmap-icon.png'); 
+}
+
+.icon-cluster {
+  background-image: url('../../../../../../../public/icons/cluster-icon.png'); 
+}
+
+.icon-csv, 
+.icon-shp, 
+.icon-kml, 
+.icon-pin, 
+.icon-heatmap, 
+.icon-cluster {
+  width: 14px;
+  height: 14px;
+  background-size: 14px;
+  margin-right: 5px;
+}
+
+.export-bt {
+  background-image: url('../../../../../../../public/icons/export-icon.png') !important; 
+  background-size: 14px 14px !important;
+}
+
+.settings {
+  background-image: url('../../../../../../../public/icons/settings-icon.png') !important; 
+  background-size: 14px 14px !important;
+}
+
+.menu-item.custom-group {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+  height: initial;
+  cursor: initial;
+
+  &:last-child {
+    border: none;
+  }
+  &:hover {
+    background: white;
+  }
+}
+
+.group-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  border-bottom: 1px solid lightgrey;
+  padding: 0 10px;
+  cursor: pointer;
+  
+  &:last-child {
+    border: none;
+  }
+
+  &:hover {
+    background-color: lightyellow; 
+  }
+}
+
+.group-item-input-label {
+  text-transform: uppercase;
+}
+
+.group-item-input {
+  justify-self: self-end;
+  display: flex;
+  margin-left: auto;
+  margin-right: 0;
+  outline: none;
+}
+

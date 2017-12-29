@@ -1,0 +1,57 @@
+{
+  "name": "@stencil/starter",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Stencil App Starter",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "stencil build --prerender",
+    "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
+    "serve": "stencil-dev-server",
+    "start": "npm run dev",
+    "test": "jest --no-cache",
+    "test.watch": "jest --watch --no-cache"
+  },
+  "dependencies": {
+    "@cc/shp-write": "^0.3.5",
+    "@stencil/core": "next",
+    "@stencil/router": "latest",
+    "leaflet": "^1.2.0",
+    "leaflet.mousecoordinate": "git+https://github.com/iofirag/leaflet.mouseCoordinate.git",
+  },
+  "devDependencies": {
+    "@stencil/dev-server": "latest",
+    "@stencil/utils": "latest",
+    "@types/html2canvas": "^0.5.35",
+    "@types/jest": "^21.1.1",
+    "@types/leaflet": "^1.2.3",
+    "canvg-browser": "^1.0.0",
+    "html2canvas": "^1.0.0-alpha.3",
+    "jest": "^21.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ionic-team/stencil-app-starter.git"
+  },
+  "author": "Ionic Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ionic-team/stencil"
+  },
+  "homepage": "https://github.com/ionic-team/stencil",
+  "jest": {
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json",
+      "jsx"
+    ]
+  }
+}

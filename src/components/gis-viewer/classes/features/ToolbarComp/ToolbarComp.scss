@@ -1,0 +1,172 @@
+$buttonWidth: 30px;
+$shadowBox: 4px 4px 4px 0px rgba(0,0,0,0.36);
+
+@function bgImageCenter($some-number, $another-number){
+  @return ($some-number - $another-number)/2 - 1;
+}
+
+.leaflet-control-custom {
+  background-size: 16px !important;
+}
+
+.settings, .save, .export, .layer-controller {
+  background-repeat: no-repeat;
+  background-size: 16px !important;
+
+}
+.leaflet-control-search.leaflet-control a.search-button {
+  background-image: url('./assets/icons/search.png') !important;
+  background-position: 6px 6px !important;
+  background-repeat: no-repeat !important;
+  background-size: 16px !important;
+}
+
+.settings {
+  background-image: url('./assets/icons/settings.png') !important;
+}
+.save {
+  background-image: url('./assets/icons/content-save.png') !important;
+}
+.export {
+  background-image: url('./assets/icons/export.png') !important;
+}
+.layer-controller {
+  background-image: url('./assets/icons/layers.png');
+  background-position-x: 6px;
+  background-position-y: 7px;
+}
+
+.leaflet-draw {
+  margin: 0px !important;
+}
+
+.custom-toolbar.leaflet-draw-toolbar.leaflet-bar {
+  box-shadow: $shadowBox;
+  border: 1px solid grey;
+  border-radius: 0px;
+  display: flex;
+
+  .custom-toolbar-group {
+    display: flex;
+    border-right: 1px solid lightgrey;
+    background-color: white;
+
+    .zoom-to-extend-bt {
+       margin: 0px;
+      border: none;
+      display: flex;
+      width: $buttonWidth;
+      border-radius: 0px;
+
+      &:hover {
+        background-color: #f4f4f4;
+      }
+    }
+
+    .leaflet-control-search {
+      margin: 0px;
+      border: none;
+      display: flex;
+
+      a {
+        border: none;
+        border-radius: 0px;
+      }
+
+      .search-tooltip {
+        left: 0;
+        min-width: 250px;
+        border-radius: 0px;
+        margin: 0px;
+        top: 35px;
+        box-shadow: $shadowBox;
+
+        .search-tip {
+          margin: 0px;
+          border-bottom: 1px solid;
+          border-radius: 0px;
+        }
+
+      }
+
+      .search-input {
+        min-width: 100px !important;
+        height: 29px;
+        outline: none;
+      }
+    }
+
+    .polyline-measure:before {
+      content: "";
+      border-right: 1px solid lightgrey;
+      display: block;
+      height: 20px;
+      margin: auto;
+    }
+
+    .leaflet-control-zoom, .polyline-measure {
+      margin: 0px;
+      border: none;
+      display: flex;
+
+      a {
+        background-image: none;
+        border: none;
+        border-radius: 0px;
+      }
+    }
+
+    .leaflet-draw-toolbar.leaflet-bar {
+      margin: 0px;
+      border: none;
+      display: flex;
+
+      a {
+        text-indent: -99999px;
+        border: none;
+        border-radius: 0px;
+      }
+    }
+
+    .search-map {
+      height: 14px !important;
+      font-size: 12px;
+      padding-left: 3px;
+      width: 100px;
+
+      &:hover {
+        border: 1px solid grey;
+        height: 16px !important;
+        padding-left: 4px;
+        width: 101px;
+      }
+    }
+
+  }
+
+  .custom-toolbar-button {
+    border: none;
+    border-radius: 0px;
+    width: $buttonWidth;
+
+    &.no-bg-image {
+      background-image: none;
+    }
+
+    &.zoom-in, &.zoom-out {
+      font-size: 17px;
+    }
+
+    &.zoom-to-extend-bt {
+      background-repeat: no-repeat;
+      background-color: white;
+      background-position-x: bgImageCenter($buttonWidth, 16px);
+      background-position-y: 7px;
+      background-size: 16px !important;
+    }
+
+    &:hover {
+      background-color: #f4f4f4;
+    }
+  }
+}

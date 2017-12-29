@@ -1,0 +1,43 @@
+.leaflet-control-search.leaflet-control.search-exp {
+  background: #fff;
+  box-shadow: 0 1px 7px #999; }
+  .leaflet-control-search.leaflet-control.search-exp .search-cancel:hover {
+    width: 17px;
+    height: 17px;
+    right: 33px;
+    top: 1px; }
+  .leaflet-control-search.leaflet-control.search-exp .search-cancel {
+    width: 17px;
+    height: 18px;
+    border: none;
+    right: 33px; }
+
+.leaflet-control-search.leaflet-control {
+  display: flex;
+  flex-direction: row-reverse;
+  box-shadow: none;
+  background: none; }
+  .leaflet-control-search.leaflet-control .search-button {
+    background-position: 4px 5px !important; }
+
+.leaflet-control-search.leaflet-control.search-exp .search-cancel {
+  right: 3px; }
+
+.search-button.leaflet-bar {
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background-clip: padding-box; }
+
+.leaflet-control-search .search-input {
+  min-width: 200px;
+  height: 33px;
+  margin: 0px;
+  border: none; }
+
+.leaflet-control-search .search-cancel {
+  top: 4px; }
+
+.leaflet-control-search.leaflet-control.search-exp .search-cancel:hover {
+  right: 3px;
+  top: 4px; }

@@ -1,0 +1,118 @@
+@import '../../../../../../public/color-variables.scss';
+$buttonWidth: 30px;
+$shadowBox: 4px 4px 4px 0px rgba(0,0,0,0.36);
+
+.leaflet-control-layers-expanded {
+  padding: 0px !important;
+}
+.ac-container div[id^="leaflet-control-accordion-layers"] > label,
+.ac-container input.menu:checked + div[id^="leaflet-control-accordion-layers"] > label {
+  padding-right: 40px;
+  &:hover:after {
+    content: '';
+    right: 18px !important;
+  }
+}
+
+.ac-container {
+  article {
+    margin-top: 0px ;
+  }
+  overflow-y: hidden;
+  .menu-item-checkbox, .menu-item-radio {
+    padding: 0 24px;
+
+    input {
+      margin-left: 0;
+    }
+
+    label {
+      padding-right: initial;
+    }
+  }
+}
+
+.leaflet-control-layers {
+  background: rgba(255,255,255, 1) !important;
+}
+
+div[id^="leaflet-control-accordion-layers"] > label {
+  height: 23px;
+  line-height: 23px;
+  font-size: 15px;
+  font-family: 'Roboto';
+}
+
+
+.leaflet-control-layers.leaflet-control-layers-expanded.leaflet-control {
+  margin: 0;
+  border-radius: 0px;
+  border: 0px;
+
+  label {
+    white-space: nowrap;
+  }
+}
+
+.custom-layer-controller.leaflet-control {
+    position: absolute;
+    z-index: 999;
+    left: 0px;
+    top: 35px;
+    border: none;
+    border-radius: 0px;
+    width: fit-content;
+    display: none;
+    box-shadow: $shadowBox;
+    background-color: white;
+
+    &.show {
+      display: block;
+    }
+
+    .ac-container input.menu:checked ~ article.ac-large {
+      max-height: initial;
+    }
+}
+
+.material-icons {
+  &.add-circle {
+    width: 22px;
+    height: 22px;
+    color: $button-color;
+  }
+}
+
+.drop-down-label {
+  display: block;
+}
+
+.custom-layer-controller-header {
+  padding-left: 21px;
+  padding-right: 15px;
+
+  .custom-layer-controller-header-title {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    border-bottom: 1px solid #eee;
+
+    span {
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.mdl-checkbox__box-outline {
+  margin-left: -1px; 
+}
+
+.mdl-checkbox__ripple-container {
+  left: -11px;
+}
+.custom-layer-controller-header-content{
+  padding: 13px 0;
+}

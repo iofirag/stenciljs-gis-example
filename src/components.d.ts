@@ -41,6 +41,36 @@ declare global {
 
 
 import {
+  MouseCoordintatePlugin as MouseCoordinatePlugin
+} from './components/gis-viewer/classes/features/MouseCoordinatePlugin';
+
+declare global {
+  interface HTMLMouseCoordinatePluginElement extends MouseCoordinatePlugin, HTMLElement {
+  }
+  var HTMLMouseCoordinatePluginElement: {
+    prototype: HTMLMouseCoordinatePluginElement;
+    new (): HTMLMouseCoordinatePluginElement;
+  };
+  interface HTMLElementTagNameMap {
+    "mouse-coordinate-plugin": HTMLMouseCoordinatePluginElement;
+  }
+  interface ElementTagNameMap {
+    "mouse-coordinate-plugin": HTMLMouseCoordinatePluginElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "mouse-coordinate-plugin": JSXElements.MouseCoordinatePluginAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MouseCoordinatePluginAttributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
+
+import {
   GisViewer as GisViewer
 } from './components/gis-viewer/gis-viewer';
 

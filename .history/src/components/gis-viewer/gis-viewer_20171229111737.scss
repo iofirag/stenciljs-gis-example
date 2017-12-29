@@ -1,0 +1,13 @@
+gis-viewer {
+    // @import '../../../node_modules/leaflet/dist/leaflet';
+    @import '../../../node_modules/leaflet-search/dist/leaflet-search.min.css';
+    
+    #map {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        position: absolute !important;
+    }
+}

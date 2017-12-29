@@ -1,0 +1,5 @@
+class test {
+    constructor(parameters) {
+        
+    }
+}

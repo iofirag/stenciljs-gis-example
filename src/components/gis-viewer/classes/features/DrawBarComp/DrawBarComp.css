@@ -1,0 +1,30 @@
+.leaflet-path-draggable,
+.leaflet-path-draggable path {
+  cursor: move; }
+
+.leaflet-editing-icon {
+  border-radius: 50%; }
+
+a[title="Add textual marker"] {
+  background-image: url("../../../assets/text-icon.png") !important;
+  background-size: 12px !important;
+  background-position: 9px !important;
+  background-repeat: no-repeat; }
+
+ul.leaflet-draw-actions {
+  border: 1px solid #464646;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.36);
+  top: 34px !important;
+  left: 0px !important; }
+  ul.leaflet-draw-actions li a {
+    width: auto !important;
+    background-image: none !important;
+    border-radius: 0 !important;
+    background-color: lightgrey; }
+
+.disabled-toolbar-section {
+  pointer-events: none; }
+
+.disabled-toolbar-section > a.disabled-toolbar-action {
+  pointer-events: none;
+  cursor: not-allowed !important; }
