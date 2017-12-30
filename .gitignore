@@ -13,6 +13,7 @@ log.txt
 *.sublime-workspace
 
 .idea/
+.history/
 .vscode/
 .sass-cache/
 .versions/
